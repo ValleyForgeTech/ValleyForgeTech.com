@@ -1,0 +1,11 @@
+footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #efefef;
+}
+
+/* Height for angular-google-map directive */
+.angular-google-map-container { 
+    height: 200px; 
+}

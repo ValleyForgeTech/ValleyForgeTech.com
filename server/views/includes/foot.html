@@ -1,0 +1,26 @@
+{% for file in assets.js %}
+	<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+
+{% if (process.env.NODE_ENV == 'development') %}
+	<!-- Livereload script rendered -->
+	<script type="text/javascript" src="{{'http://' + req.host + ':35729/livereload.js'}}"></script>
+{% endif %}
+
+<script type="text/javascript" src="/modules/aggregated.js"></script>
+
+<!-- Google Maps Scripts. Include these seperately.  The CSS comprssor used by Grunt causes issues w/ variable names. -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="public/system/lib/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="public/system/lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38594284-4', 'valleyforgetech.com');
+  ga('send', 'pageview');
+
+</script>  

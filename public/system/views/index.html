@@ -1,0 +1,49 @@
+<section data-ng-controller="IndexController" data-ng-init="updateEvents()">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="well">
+        <h4>Upcoming Events</h4>
+        <ul class="list-unstyled">
+          <li data-ng-repeat="event in events">
+            <a href="/#!/#event_{{event.id}}" title="{{event.name}}">{{event.time|date:'M/d'}}: {{event.name}}  </a>
+          </li>
+        </ul>
+      </div>
+      <div class="well">
+        <h4>External Links</h4>
+        <ul>
+          <li><a href="http://www.meetup.com/valleyforgetech" title="Valley Forge Tech Meetup" rel="nofollow" target="_blank">Meetup</a></li>
+          <li><a href="http://www.github.com/valleyforgetech" title="Valley Forge Tech GitHub" rel="nofollow" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row" data-ng-repeat="event in events">
+        <h2 class="col-md-12" id="event_{{event.id}}">
+          <a href="{{event.event_url}}" title="{{event.name}}" rel="nofollow" target="_blank">{{event.name}}</a>
+          <span class="label label-info">{{event.status|uppercase}}</span>
+        </h2>
+        <div class="col-md-9">
+          <h3>When: {{event.time|date:'medium'}}</h3>
+          <div ng-bind-html="event.description"></div>
+          <h4>RSVPs: {{event.yes_rsvp_count}}</h4>
+        </div>
+        <div class="col-md-3">  
+          <h3>Where:</h3>
+          <google-map 
+            center="{latitude:event.venue.lat,longitude:event.venue.lon}"
+            zoom="12">
+            <marker coords="{latitude:event.venue.lat,longitude:event.venue.lon}">
+            </marker>
+          </google-map>
+          <address>
+            <strong>{{event.venue.name}}</strong><br>
+            {{event.venue.address_1}}<br>
+            {{event.venue.city}}, {{event.venue.state}} {{event.venue.zip}}
+          </address>
+        </div>
+        <div class="row"><div class="col-md-12"><hr></div></div>
+      </div>
+    </div>
+  </div>
+</section>

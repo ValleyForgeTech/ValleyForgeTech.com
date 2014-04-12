@@ -1,0 +1,61 @@
+{
+  "name": "valleyforgetech",
+  "description": "Code powering ValleyForgeTech.com. Based off MEAN.io.",
+  "keywords": "Valley Forge Tech, Meetup, Angular.js, Node.js, Mean.io",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Mathew Goldsborough <mgolds02@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valleyforgetech/valleyforgetech.gitgit"
+  },
+  "bugs": {
+    "url": "https://github.com/ValleyForgeTech/ValleyForgeTech.com/issues"
+  },
+  "license" : "MIT",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "scripts": {
+    "start": "node node_modules/grunt-cli/bin/grunt",
+    "test": "node node_modules/grunt-cli/bin/grunt test",
+    "postinstall": "node node_modules/bower/bin/bower install; node node_modules/grunt-cli/bin/grunt cssmin uglify;"
+  },
+  "dependencies": {
+    "assetmanager": "^0.1.1",
+    "bower": "^1.3.0",
+    "connect-flash": "~0.1.1",
+    "consolidate": "~0.10.0",
+    "dependable": "0.2.5",
+    "express": "~3.4.7",
+    "express-validator": "~1.0.1",
+    "forever": "~0.10.11",
+    "grunt-cli": "~0.1.11", 
+    "grunt-concurrent": "latest",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "latest",
+    "grunt-env": "^0.4.1",
+    "grunt-karma": "^0.6.2",
+    "grunt-mocha-test": "latest",
+    "grunt-nodemon": "0.2.0",
+    "load-grunt-tasks": "^0.4.0",
+    "lodash": "~2.4.1",
+    "mean-logger": "0.0.1",
+    "mongoose": "^3.8.3",
+    "meanio":"0.3.18",
+    "swig": "~1.3.2",
+    "time-grunt": "^0.3.1",
+    "view-helpers": "~0.1.4"
+  },
+  "devDependencies": {
+    "assetmanager": "^0.1.1",
+    "karma": "^0.10.4",
+    "karma-coverage": "^0.1.0",
+    "should": "2.1.1",
+    "supertest": "0.8.2"
+  }
+}

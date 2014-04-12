@@ -1,0 +1,22 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>{{title}} - {{appName}}</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="keywords" content="valley forge tech, meetup, technology">
+    <meta name="description" content="Building a technology community in the Philadelphia suburbs. Join us for presetnations, demos and dev nights.">
+
+    <link href="public/system/assets/img/favicon.png" rel="shortcut icon" type="image/x-icon">
+
+    {% for file in assets.css %}
+        <link rel="stylesheet" href="{{file}}">
+    {% endfor %}
+
+    <link rel="stylesheet" href="/modules/aggregated.css">
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>

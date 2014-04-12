@@ -1,0 +1,11 @@
+/* TEAM */
+    Valley Forge Tech Co-Organizer: Mathew Goldsborough
+    Twitter: @matgolds
+
+/* THANKS */
+    http://www.mean.io/
+
+/* SITE */
+    Last update: 2014/04/12
+    Standards: HTML5, CSS3
+    Components: angular.js, mean.io, node.js
